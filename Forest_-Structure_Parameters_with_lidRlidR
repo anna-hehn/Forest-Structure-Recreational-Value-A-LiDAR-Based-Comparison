@@ -1,0 +1,96 @@
+#FOREST STRUCTURE PARAMETERS#
+
+library(lidR)
+library(terra)  
+library(sf)     
+library(dplyr)
+library(ggplot2)
+
+#Data Loading
+setwd("D:/LiDen/Daten")
+
+#Load point cloud
+las <- readLAS("603_5547_seg.laz", filter = "-drop_withheld")
+crs(las) <- 25832
+setwd("D:/LiDen/Daten/Sailershausen/lidR_Sailershausen")
+#Preview raw data
+plot(las)
+
+#DTM Creation & Height Normalization ---
+dtm <- rasterize_terrain(las, res = 0.2, algorithm = knnidw())
+las_norm <- normalize_height(las, dtm)
+
+#3. Treetop Detection
+f <- function(x) { x * 0.1 + 3 }
+ttops <- locate_trees(las = las_norm, algorithm = lmf(f), uniqueness = "bitmerge")
+plot(ttops["Z"], cex = 0.5, pch = 19, pal = height.colors, nbreaks = 30, main = "Detected Treetops")
+
+#4. Canopy Height Model (CHM)
+chm <- rasterize_canopy(las = las_norm, res = 0.5, algorithm = pitfree(subcircle = 0.15))
+
+#Smooth CHM to reduce artifacts
+kernel <- matrix(1, 3, 3)
+chm_smooth <- terra::focal(chm, w = kernel, fun = median, na.rm = TRUE)
+plot(chm_smooth, main = "Smoothed Canopy Height Model")
+
+#5. Tree Segmentation & Crown Metrics
+# Segment trees using Silva et al. (2016) algorithm
+algo <- silva2016(chm_smooth, ttops)
+las_seg <- segment_trees(las_norm, algo)
+
+#Derive crown metrics (Convex Hull for area and Points for locations)
+crowns <- crown_metrics(las_seg, func = .stdtreemetrics, geom = "convex")
+trees_lidar <- crown_metrics(las_seg, func = .stdtreemetrics, geom = "point")
+plot(crowns["convhull_area"], main = "Crown area (convex hull)")
+plot(trees_lidar["Z"], main = "Tree heights", pch = 16)
+
+#Statistical summary of crown areas
+summary(crowns$convhull_area)
+
+#6. Export Inventory Data for TreeCompare
+inventory_table <- as.data.frame(sf::st_coordinates(trees_lidar))
+names(inventory_table) <- c("x", "y")
+inventory_table$hoehe <- trees_lidar$Z
+inventory_table$kronenflaeche <- trees_lidar$convhull_area
+
+# Save dataset
+write.csv2(inventory_table, "Baumparameter_603_5547.csv", row.names = FALSE)
+print("Inventory CSV successfully saved with clean IDs!")
+
+#7. Density Metrics: Stem Density & Canopy Cover
+
+# A: Stem Density (Trees per Hectar)
+# Rasterize treetop locations at 1m resolution
+fine_raster <- terra::rast(ttops, res = 1)
+stem_presence <- terra::rasterize(ttops, fine_raster, fun = "length", background = 0)
+
+# Aggregate to 20x20m grid cells (400 sqm)
+stem_sum_20m <- terra::aggregate(stem_presence, fact = 20, fun = sum, na.rm = TRUE)
+
+# Extrapolate to 1 hectare scale (factor: 10000 / 400 = 25)
+stammzahl_dichte <- stem_sum_20m * 25
+
+# B: Canopy Cover (%)
+# Threshold CHM at 2 meters height and aggregate to 20x20m grid cells
+crown_mask <- chm_smooth > 2
+kronenschluss <- terra::aggregate(crown_mask, fact = 20, fun = mean, na.rm = TRUE) * 100
+
+# Export stem density raster
+terra::writeRaster(stammzahl_dichte, "D:/LiDen/Daten/Sailershausen/lidR_Sailershausen/stammzahl_dichte_sail.tif", overwrite = TRUE)
+
+#8. Visualization of Density Metrics
+density_colors <- colorRampPalette(c("white", "gold", "forestgreen", "darkgreen"))(255)
+
+# Plot Stem Density (capped at 1000 trees/ha for visualization contrast)
+plot(stammzahl_dichte, 
+     main = "Stem Density (Trees / Hectare)", 
+     col = density_colors,
+     range = c(0, 1000),
+     plg = list(title = "N / ha"))
+
+# Plot Canopy Cover
+plot(kronenschluss, 
+     main = "Canopy Cover (%)", 
+     col = colorRampPalette(c("lightgoldenrod1", "yellow4", "darkgreen"))(255),
+     range = c(0, 100),
+     plg = list(title = "Cover (%)"))
