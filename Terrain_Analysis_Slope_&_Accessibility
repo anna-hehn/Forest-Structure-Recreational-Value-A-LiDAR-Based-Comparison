@@ -1,0 +1,22 @@
+### TERRAIN ANALYSIS: SLOPE & ACCESSIBILITY##
+
+##Calculate slope in radians and convert to percentage
+slope_rad <- terra::terrain(dtm, v = "slope", unit = "radians")
+slope_pct <- tan(slope_rad) * 100
+#Color palette:)
+terrain_colors <- colorRampPalette(c("palegreen4", "lightyellow", "indianred4"))(255)
+#Plot Slope
+plot(slope_pct, 
+     main = "Terrain Slope (%)", 
+     col = terrain_colors,
+     range = c(0, 100),
+     plg = list(title = "Slope (%)"))
+
+##Calculate accessibility threshold (slope less than or equal to 6%)
+accessible_areas <- slope_pct <= 6
+# Plot accessibility classification
+plot(as.factor(accessible_areas), 
+     main = "Accessibility Map\n (Slope <= 6%)", 
+     col = c("indianred4", "palegreen4"),
+     type = "classes",
+     levels = c("Too Steep (>6%)", "Accessible (<=6%)"))
