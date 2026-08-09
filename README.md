@@ -100,3 +100,57 @@ plot(crowns["convhull_area"], main = "Crown area (convex hull)")
 plot(trees_lidar["Z"], main = "Tree heights", pch = 16)
 summary(crowns$convhull_area)
 ```
+
+### Inventory Data Export for TreeCompare
+
+```R
+## Export Inventory Data for TreeCompare
+inventory_table <- as.data.frame(sf::st_coordinates(trees_lidar))
+names(inventory_table) <- c("x", "y")
+inventory_table$hoehe <- trees_lidar$Z
+inventory_table$kronenflaeche <- trees_lidar$convhull_area
+
+## Save dataset
+write.csv2(inventory_table, "Baumparameter_603_5547.csv", row.names = FALSE)
+```
+
+---
+
+### Density Metrics: Stem Density and Canopy Cover
+* **Stem Density ($N/\text{ha}$):** Treetop point geometries are rasterized onto a fine 1 m grid to log tree presence. 
+  * Aggregation → Pixels are grouped into a **20x20 m forest inventory grid** (400 $\text{m}^2$).
+  * Hectare Extrapolation → To scale the local tree count up to a standard hectare (10,000 $\text{m}^2$), values are multiplied by a scaling factor of 25 ($10,000 / 400 = 25$).
+* **Canopy Cover (%):** The smoothed Canopy Height Model (CHM) is thresholded at 2 meters to isolate the upper canopy layer from low vegetation and ground noise.
+  * Aggregation → The binary mask is aggregated to the same 20x20 m grid to compute the percentage of crown coverage.
+* **Geospatial Export:** The resulting stem density matrix is exported as a GeoTIFF raster (`stammzahl_dichte_sail.tif`) for spatial mapping and statistical comparison across the plots.
+
+```R
+## Stem Density (Trees per Hectare)
+# Rasterize treetop locations at 1m resolution
+fine_raster <- terra::rast(ttops, res = 1)
+stem_presence <- terra::rasterize(ttops, fine_raster, fun = "length", background = 0)
+
+# Aggregate to 20x20m grid cells (400 sqm)
+stem_sum_20m <- terra::aggregate(stem_presence, fact = 20, fun = sum, na.rm = TRUE)
+
+# Extrapolate to 1 hectare scale (factor: 10000 / 400 = 25)
+stammzahl_dichte <- stem_sum_20m * 25
+
+## Canopy Cover (%)
+# Threshold CHM at 2 meters height and aggregate to 20x20m grid cells
+crown_mask <- chm_smooth > 2
+kronenschluss <- terra::aggregate(crown_mask, fact = 20, fun = mean, na.rm = TRUE) * 100
+
+# Plot Canopy Cover
+plot(kronenschluss, 
+     main = "Canopy Cover (%)", 
+     col = colorRampPalette(c("lightgoldenrod1", "yellow4", "darkgreen"))(255),
+     range = c(0, 100),
+     plg = list(title = "Cover (%)"))
+
+## Export stem density raster
+terra::writeRaster(stammzahl_dichte, "D:/LiDen/Daten/Sailershausen/lidR_Sailershausen/stammzahl_dichte_sail.tif", overwrite = TRUE)
+```
+---
+
+## Terrain Analysis: Slope and Accessibility
