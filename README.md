@@ -154,3 +154,41 @@ terra::writeRaster(stammzahl_dichte, "D:/LiDen/Daten/Sailershausen/lidR_Sailersh
 ---
 
 ## Terrain Analysis: Slope and Accessibility
+
+### Slope Derivation
+This step extracts topographic information from the previously generated Digital Terrain Model (DTM) using the `terra` package:
+
+* **Slope Calculation:** The function `terra::terrain()` computes the surface slope in radians based on the cellular elevation differences.
+* **Unit Conversion:** Radians are converted into slope percentage (%) using the trigonometric tangent transformation ($\tan(\text{slope}_{\text{rad}}) \times 100$).
+* **Visualization:** Generates a 2D topographic map using a continuous color ramp (`terrain_colors`) scaled from 0% (flat ground, green) to 100% (steep terrain, red).
+* 
+```R
+## Calculate slope in radians and convert to percentage
+slope_rad <- terra::terrain(dtm, v = "slope", unit = "radians")
+slope_pct <- tan(slope_rad) * 100
+
+# Color palette
+terrain_colors <- colorRampPalette(c("palegreen4", "lightyellow", "indianred4"))(255)
+
+# Plot Slope
+plot(slope_pct, 
+     main = "Terrain Slope (%)", 
+     col = terrain_colors,
+     range = c(0, 100),
+     plg = list(title = "Slope (%)"))
+```
+
+Terrain Accessibility Classification
+This step performs a binary threshold analysis to classify the terrain based on machine or operational accessibility constraints. By evaluating the slope percentage grid, it isolates all regions with a slope less than or equal to 6%, outputting a boolean logical raster. This mask is then converted into a categorical factor raster to assign explicit land management classes. Finally, the script generates a classified map using distinct operational colors: red for areas that are too steep for standard machinery (>6%), and green for safely accessible operating zones (<=6%).
+
+```R
+## Calculate accessibility threshold (slope less than or equal to 6%)
+accessible_areas <- slope_pct <= 6
+
+# Plot accessibility classification
+plot(as.factor(accessible_areas), 
+     main = "Accessibility Map\n (Slope <= 6%)", 
+     col = c("indianred4", "palegreen4"),
+     type = "classes",
+     levels = c("Too Steep (>6%)", "Accessible (<=6%)"))
+```
