@@ -192,3 +192,48 @@ plot(as.factor(accessible_areas),
      type = "classes",
      levels = c("Too Steep (>6%)", "Accessible (<=6%)"))
 ```
+
+---
+
+## Statistical Tree Height Comparison
+This step compiles the inventory datasets from both forest stands into a standardized dataframe to statistically compare tree heights. Using `ggplot2`, it generates a comparative boxplot that directly contrasts the height distributions.
+
+```R
+library(ggplot2)
+library(dplyr)
+
+# Load inventory parameters for both forest plots
+df_raw_bk <- read.csv2("D:/LiDen/Daten/BK/lidR_BK/Baumparameter_575_5563.csv")
+df_raw_sail <- read.csv2("D:/LiDen/Daten/Sailershausen/lidR_Sailershausen/Baumparameter_603_5547.csv")
+
+# Location Labels
+df_raw_bk$Location <- "Wald der Seele\n(Bad Kissingen)"
+df_raw_sail$Location <- "University Forest\n(Sailershausen)"
+
+# Standardize columns and merge datasets into a single dataframe
+height_comparison <- rbind(
+  data.frame(Hoehe = df_raw_bk$hoehe, Location = df_raw_bk$Location),
+  data.frame(Hoehe = df_raw_sail$hoehe, Location = df_raw_sail$Location)
+)
+
+# Boxplot: Comparison of Forest Stands
+ggplot(height_comparison, aes(x = Location, y = Hoehe, fill = Location)) +
+  geom_boxplot(outlier.color = "firebrick", outlier.shape = 16, outlier.size = 1.5) +
+  # Map specific fill colors to each plot location
+  scale_fill_manual(values = c(
+    "University Forest\n(Sailershausen)" = "wheat", 
+    "Wald der Seele\n(Bad Kissingen)" = "wheat4"
+  )) +
+  labs(
+    x = "Plot",
+    y = "Tree Height (m)"
+  ) +
+  theme_minimal() +
+  theme(
+    legend.position = "none", # Hide redundant legend since x-axis provides context
+    axis.text.x = element_text(size = 11, face = "bold", lineheight = 0.9) # Format text layout
+  )
+
+  ---
+
+  # Results
