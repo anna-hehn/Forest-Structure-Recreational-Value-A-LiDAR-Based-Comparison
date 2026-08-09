@@ -16,7 +16,7 @@ setwd("D:/LiDen/Daten/Sailershausen/lidR_Sailershausen")
 #Preview raw data
 plot(las)
 
-##DTM Creation & Height Normalization ---
+##DTM Creation & Height Normalization
 dtm <- rasterize_terrain(las, res = 0.2, algorithm = knnidw())
 las_norm <- normalize_height(las, dtm)
 
