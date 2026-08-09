@@ -156,7 +156,7 @@ terra::writeRaster(stammzahl_dichte, "D:/LiDen/Daten/Sailershausen/lidR_Sailersh
 ## Terrain Analysis: Slope and Accessibility
 
 ### Slope Derivation
-This step extracts topographic information from the previously generated Digital Terrain Model (DTM) using the `terra` package:
+The code extracts topographic information from the previously generated Digital Terrain Model (DTM) using the `terra` package:
 
 * **Slope Calculation:** The function `terra::terrain()` computes the surface slope in radians based on the cellular elevation differences.
 * **Unit Conversion:** Radians are converted into slope percentage (%) using the trigonometric tangent transformation ($\tan(\text{slope}_{\text{rad}}) \times 100$).
@@ -178,7 +178,7 @@ plot(slope_pct,
      plg = list(title = "Slope (%)"))
 ```
 
-Terrain Accessibility Classification
+### Terrain Accessibility Classification
 This step performs a binary threshold analysis to classify the terrain based on machine or operational accessibility constraints. By evaluating the slope percentage grid, it isolates all regions with a slope less than or equal to 6%, outputting a boolean logical raster. This mask is then converted into a categorical factor raster to assign explicit land management classes. Finally, the script generates a classified map using distinct operational colors: red for areas that are too steep for standard machinery (>6%), and green for safely accessible operating zones (<=6%).
 
 ```R
