@@ -53,7 +53,6 @@ inventory_table$kronenflaeche <- trees_lidar$convhull_area
 
 ##Save dataset
 write.csv2(inventory_table, "Baumparameter_603_5547.csv", row.names = FALSE)
-print("Inventory CSV successfully saved with clean IDs!")
 
 
 ##DENSITY METRICS: Stem Density & Canopy Cover##
