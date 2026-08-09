@@ -69,21 +69,12 @@ stammzahl_dichte <- stem_sum_20m * 25
 #Threshold CHM at 2 meters height and aggregate to 20x20m grid cells
 crown_mask <- chm_smooth > 2
 kronenschluss <- terra::aggregate(crown_mask, fact = 20, fun = mean, na.rm = TRUE) * 100
-
-##Export stem density raster
-terra::writeRaster(stammzahl_dichte, "D:/LiDen/Daten/Sailershausen/lidR_Sailershausen/stammzahl_dichte_sail.tif", overwrite = TRUE)
-
-##Visualization of Density Metrics
-density_colors <- colorRampPalette(c("white", "gold", "forestgreen", "darkgreen"))(255)
-#Plot Stem Density (capped at 1000 trees/ha for visualization contrast)
-plot(stammzahl_dichte, 
-     main = "Stem Density (Trees / Hectare)", 
-     col = density_colors,
-     range = c(0, 1000),
-     plg = list(title = "N / ha"))
 #Plot Canopy Cover
 plot(kronenschluss, 
      main = "Canopy Cover (%)", 
      col = colorRampPalette(c("lightgoldenrod1", "yellow4", "darkgreen"))(255),
      range = c(0, 100),
      plg = list(title = "Cover (%)"))
+
+##Export stem density raster
+terra::writeRaster(stammzahl_dichte, "D:/LiDen/Daten/Sailershausen/lidR_Sailershausen/stammzahl_dichte_sail.tif", overwrite = TRUE)
