@@ -236,4 +236,4 @@ ggplot(height_comparison, aes(x = Location, y = Hoehe, fill = Location)) +
 
   ---
 
-  # Results
+## Results
