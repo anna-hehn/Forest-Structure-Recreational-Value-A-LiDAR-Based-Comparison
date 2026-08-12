@@ -233,6 +233,7 @@ ggplot(height_comparison, aes(x = Location, y = Hoehe, fill = Location)) +
     legend.position = "none", # Hide redundant legend since x-axis provides context
     axis.text.x = element_text(size = 11, face = "bold", lineheight = 0.9) # Format text layout
   )
+```
 
   ---
 
