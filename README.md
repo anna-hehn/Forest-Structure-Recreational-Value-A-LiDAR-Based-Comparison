@@ -248,3 +248,11 @@ To achieve a forest structure that contributes to recreation, it is described as
 The Tree Top visualization illustrates the detected treetops for both study plots. A comparative analysis of the spatial patterns reveals distinct structural differences between the two forest stands:
 Wald der Seele (Bad Kissingen) features a lower stem density characterized by an irregular spatial distribution of trees. The average tree height is 23.84 meters, displaying a heterogeneous mixture of various height classes across the entire area.
 University Forest (Sailershausen) exhibits a significantly higher stem density with an average tree height of 19.52 meters. A spatial gradient is observable, showing a steady decrease in tree height from north to south. The stand displays a structured, linear organization, including clear linear gaps aligned from northeast to southwest, along with matching geometric tree rows.
+
+### **2) Crown Area**
+Wide branches and large tree canopies are recommended as structures that convey a sense of shelter and security; for recreational forests, it is advised to preserve large-crowned trees (Immich et al., 2022). Varied or unique lighting conditions resulting from a heterogeneous arrangement of different canopy sizes are described as a distinct quality criterion of recreational forests, as they create a diverse and high-contrast forest scenery (Wagner et al., 2022; Immich et al., 2022).
+
+![CrownArea](Images/CrownArea.png)
+
+The visualization of the crown area illustrates the crown sizes of both plots in square meters. An analysis of the "Wald der Seele" (Bad Kissingen) plot reveals a heterogeneous, irregular composition of varying canopy sizes, including several individuals that exceed a substantial area of 150 square meters. The average crown area within this stand is 59.05 square meters.
+In contrast, the "University Forest" (Sailershausen) stand exhibits only isolated tree crowns exceeding 150 square meters, which are clustered in the western section of the plot. The average crown area here is 32.97 square meters, and the stand is characterized by a rather small and largely homogeneous distribution of canopy sizes.
