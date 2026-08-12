@@ -238,3 +238,12 @@ ggplot(height_comparison, aes(x = Location, y = Hoehe, fill = Location)) +
   ---
 
 ## Results
+The following Plots show the relevant Outcome of the Workflow above. The Graphics conzinously show the direct comparison between Forst for the Soul Bad Kissingen and the University Forest Sailershausen, gestützt from Literary Nachweisen.
+
+### **1) Tree Tops**
+To achieve a forest structure that contributes to recreation, it is described as a multi-layered mixed forest with diverse height and age structures. Furthermore, an irregular tree distribution and density contribute to a varied forest scenery, which effectively conveys the desired sense of naturalness (Wagner et al., 2022; Immich & Robl, 2023).
+
+![Tree Tops](Images/TreeTops.pngImages/TreeTops.png)
+The Tree Top visualization illustrates the detected treetops for both study plots. A comparative analysis of the spatial patterns reveals distinct structural differences between the two forest stands:
+Wald der Seele (Bad Kissingen) features a lower stem density characterized by an irregular spatial distribution of trees. The average tree height is 23.84 meters, displaying a heterogeneous mixture of various height classes across the entire area.
+University Forest (Sailershausen) exhibits a significantly higher stem density with an average tree height of 19.52 meters. A spatial gradient is observable, showing a steady decrease in tree height from north to south. The stand displays a structured, linear organization, including clear linear gaps aligned from northeast to southwest, along with matching geometric tree rows.
