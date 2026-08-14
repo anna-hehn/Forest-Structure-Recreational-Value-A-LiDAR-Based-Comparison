@@ -246,13 +246,27 @@ To achieve a forest structure that contributes to recreation, it is described as
 ![Tree Tops](Images/TreeTops.png)
 
 The Tree Top visualization illustrates the detected treetops for both study plots. A comparative analysis of the spatial patterns reveals distinct structural differences between the two forest stands:
-Wald der Seele (Bad Kissingen) features a lower stem density characterized by an irregular spatial distribution of trees. The average tree height is 23.84 meters, displaying a heterogeneous mixture of various height classes across the entire area.
+Forest for the Soul (Bad Kissingen) features a lower stem density characterized by an irregular spatial distribution of trees. The average tree height is 23.84 meters, displaying a heterogeneous mixture of various height classes across the entire area.
 University Forest (Sailershausen) exhibits a significantly higher stem density with an average tree height of 19.52 meters. A spatial gradient is observable, showing a steady decrease in tree height from north to south. The stand displays a structured, linear organization, including clear linear gaps aligned from northeast to southwest, along with matching geometric tree rows.
 
 ### **2) Crown Area**
-Wide branches and large tree canopies are recommended as structures that convey a sense of shelter and security; for recreational forests, it is advised to preserve large-crowned trees (Immich et al., 2022). Varied or unique lighting conditions resulting from a heterogeneous arrangement of different canopy sizes are described as a distinct quality criterion of recreational forests, as they create a diverse and high-contrast forest scenery (Wagner et al., 2022; Immich et al., 2022).
+Wide branches and large tree canopies are recommended as structures that convey a sense of shelter and security. For recreational forests, it is advised to preserve large-crowned trees (Immich et al., 2022). Varied or unique lighting conditions resulting from a heterogeneous arrangement of different canopy sizes are described as a distinct quality criterion of recreational forests, as they create a diverse and high-contrast forest scenery (Wagner et al., 2022; Immich et al., 2022).
 
 ![CrownArea](Images/CrownArea.png)
 
-The visualization of the crown area illustrates the crown sizes of both plots in square meters. An analysis of the "Wald der Seele" (Bad Kissingen) plot reveals a heterogeneous, irregular composition of varying canopy sizes, including several individuals that exceed a substantial area of 150 square meters. The average crown area within this stand is 59.05 square meters.
-In contrast, the "University Forest" (Sailershausen) stand exhibits only isolated tree crowns exceeding 150 square meters, which are clustered in the western section of the plot. The average crown area here is 32.97 square meters, and the stand is characterized by a rather small and largely homogeneous distribution of canopy sizes.
+The visualization of the crown area illustrates the crown sizes of both plots in square meters. An analysis of the Forest for the Soul (Bad Kissingen) plot reveals a heterogeneous, irregular composition of varying canopy sizes, including several individuals that exceed a substantial area of 150 square meters. The average crown area within this stand is 59.05 square meters.
+In contrast, the University Forest (Sailershausen) stand exhibits only isolated tree crowns exceeding 150 square meters, which are clustered in the western section of the plot. The average crown area here is 32.97 square meters, and the stand is characterized by a rather small and largely homogeneous distribution of canopy sizes.
+
+### **3) Crown Closure**
+Depending on the degree of canopy closure, light and shadow play out in various ways, contributing to both the restorative value and aesthetic appeal of the forest (Immich et al., 2022). The literature recommends a predominantly closed canopy interspersed with mosaic-like clearings. This structural configuration fosters higher humidity, reduces thermal heating, provides shelter from UV radiation, wind, and rain, and enhances the overall microclimate within the forest stand (Wagner et al., 2022; Immich & Robl, 2023; Immich et al., 2022).
+
+![CrownClosure](Images/CrownClosure.png)
+
+The visualization above depicts the canopy closure percentage for both study plots. A comparison between the two sites reveals similarly high average canopy closure values, with teh Forest for the Soul (Bad Kissingen) averaging 90.33% and the University Forest (Sailershausen) reaching 91.63%. Both stands are dominated by a dense, closed canopy. However, spatial variations are prominently marked by low canopy closure values. In Bad Kissingen, a distinct, larger opening and lighter spots are concentrated in the southwestern section of the plot, alongside a narrower linear feature along the eastern edge. In Sailershausen, clear diagonal linear features, accompanied by a clearing in the southeastern corner.
+
+### **4) Tree Density**
+To provide alternating light conditions while simultaneously offering a sense of retreat, shelter, and security, individual denser forest patches within an overall open stand with wider tree spacing are favored. This structural composition ensures both sufficient visual depth and easy physical accessibility for forest visitors (Immich et al. 2022).
+
+![TreeDensity](Images/TreeDensity.png)
+
+The visualization above presents the spatial variation in tree density across both study plots. A comparative assessment shows that Bad Kissingen exhibits an overall low tree density with a mean of 154.21 stems per hectare (N/ha), dominated by light yellow values with only minor, localized clusters along the northern border and near the southern edge. In contrast, the Sailershausen plot displays a noticeably higher tree density, averaging 272.59 N/ha. It features a distinct spatial gradient with a prominent, highly dense belt (dark green pixels) extending across the southern boundary, alongside a localized high-density cluster in the eastern section of the plot.
