@@ -270,3 +270,5 @@ To provide alternating light conditions while simultaneously offering a sense of
 ![TreeDensity](Images/TreeDensity.png)
 
 The visualization above presents the spatial variation in tree density across both study plots. A comparative assessment shows that Bad Kissingen exhibits an overall low tree density with a mean of 154.21 stems per hectare (N/ha), dominated by light yellow values with only minor, localized clusters along the northern border and near the southern edge. In contrast, the Sailershausen plot displays a noticeably higher tree density, averaging 272.59 N/ha. It features a distinct spatial gradient with a prominent, highly dense belt (dark green pixels) extending across the southern boundary, alongside a localized high-density cluster in the eastern section of the plot.
+
+### **5) 
