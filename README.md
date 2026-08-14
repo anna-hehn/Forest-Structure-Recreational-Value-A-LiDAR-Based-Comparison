@@ -271,4 +271,19 @@ To provide alternating light conditions while simultaneously offering a sense of
 
 The visualization above presents the spatial variation in tree density across both study plots. A comparative assessment shows that Bad Kissingen exhibits an overall low tree density with a mean of 154.21 stems per hectare (N/ha), dominated by light yellow values with only minor, localized clusters along the northern border and near the southern edge. In contrast, the Sailershausen plot displays a noticeably higher tree density, averaging 272.59 N/ha. It features a distinct spatial gradient with a prominent, highly dense belt (dark green pixels) extending across the southern boundary, alongside a localized high-density cluster in the eastern section of the plot.
 
-### **5) 
+### **5) Terrain Slope & Accessibility**
+Terrain slope is an important aspect of topography and is primarily associated with three factors: accessibility, physical exertion, and the experiential value of a forest. In the Bavarian criteria catalog for healing and curative forests, topography—alongside forest size, accessibility, tranquility, and air purity—is listed among the general requirements (Immich et al. 2022). This parameter is particularly relevant for individuals with mobility impairments. Consequently, the terrain directly influences how strenuous, safe, and inclusive a forest experience can be (Wagner et al., 2022; Immich & Robl, 2023; Immich et al., 2022). For publicly accessible buildings and their surrounding circulation areas, the German standard DIN 18040 specifies a maximum slope of 6% (BStMI 2010).
+
+![TerrainSlope](Images/TerrainSlope.png)
+
+The spatial visualization depicts the terrain slope percentage across both study plots, revealing notable topographic differences between the two areas.
+
+The Forest for the Soul (Bad Kissingen) plot exhibits a more heterogeneous topography with pronounced slope variations. While the majority of the terrain is characterized by gentle to moderate inclines (dark green to light green), steep slopes reaching up to and exceeding 60% (beige to reddish-brown shades) are prominently clustered in the western and northwestern sections, alongside a distinct steep localized depression or micro-relief feature in the central-western area. Furthermore, linear terrain features such as paths and embankment edges stand out clearly through sharper local slope gradients.
+
+In contrast, the University Forest (Sailershausen) plot is dominated by consistently gentle terrain with low slope values (predominantly green shades) across most of the area. Notable slope increases are primarily restricted to anthropogenic or structural features, such as the embankments along the diagonal forest roads and paths, as well as a distinct polygon with sharp structural edges in the southeastern corner. Overall, Sailershausen presents a considerably flatter and topographically more uniform terrain compared to the more rugged surface structure of Bad Kissingen.
+
+![Accessibility](Accessibility.png)
+
+The accessibility map categorizes terrain suitability based on the 6% slope threshold defined by DIN 18040, classifying areas with slopes of 6% or less as accessible (green) and steeper areas as unsuitable for barrier-free access (red).
+
+In the Forest for the Soul (Bad Kissingen) plot, terrain classified as accessible is predominantly confined to linear features along paths and forest tracks, as well as a small concentrated patch in the west, while the majority of the surrounding area exceeds the 6% threshold. In contrast, the University Forest (Sailershausen) plot exhibits a more diffuse and widespread distribution of accessible terrain, with green areas scattered throughout the stand alongside continuous accessible corridors along the main diagonal forest roads and within the southeastern polygon.
