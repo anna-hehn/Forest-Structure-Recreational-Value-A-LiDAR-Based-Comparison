@@ -1,5 +1,5 @@
 # Forest-Structure-Recreational-Value-A-LiDAR-Based-Comparison
-A standardized LiDAR workflow in R analyzing and comparing forest structure parameters between a designated healing forest ('Wald für die Seele', Bad Kissingen) and a managed forest ('University Forest Sailershausen') using the lidR and TreeCompR packages.
+A standardized LiDAR workflow in R analyzing and comparing forest structure parameters between a designated healing forest ('Wald für die Seele', Bad Kissingen) and a managed forest ('University Forest Sailershausen') using the lidR package.
 
 ## Study Motivation
 The phrase "forests are good for you" ("Wald tut gut")  reflects a widely held belief. Forests serve as essential environments for health and recreation, allowing individuals to escape everyday stress, noise, and urban hectic. However, the growing demand for recreational spaces introduces new expectations for forest management (Wagner et al. 2022).
