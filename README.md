@@ -2,7 +2,7 @@
 A standardized LiDAR workflow in R analyzing and comparing forest structure parameters between a designated healing forest ('Wald für die Seele', Bad Kissingen) and a managed forest ('University Forest Sailershausen') using the lidR package.
 
 ## Study Motivation
-The phrase "forests are good for you" ("Wald tut gut")  reflects a widely held belief. Forests serve as essential environments for health and recreation, allowing individuals to escape everyday stress, noise, and urban hectic. However, the growing demand for recreational spaces introduces new expectations for forest management (Wagner et al. 2022).
+The phrase "forests are good for you" ("Wald tut gut")  reflects a widely held belief (Wald für die Seele 2023; Galuska 2023). Forests serve as essential environments for health and recreation, allowing individuals to escape everyday stress, noise, and urban hectic. However, the growing demand for recreational spaces introduces new expectations for forest management (Wagner et al. 2022).
 ### This study adresses the folowing questions:
 1. How do recreation-relevant forest structure parameters derived from airborne LiDAR data (ALS) differ between a designated recreational forest and a production-oriented commercial forest?
 2. To what extent do these different forest types offer accessible, barrier-free terrain?
