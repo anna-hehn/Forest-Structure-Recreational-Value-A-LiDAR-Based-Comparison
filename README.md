@@ -382,6 +382,8 @@ The following section presents the key results of the workflow, including the re
 A forest structure that contributes to recreation is described as a multi-layered mixed forest with diverse height and age structures. Furthermore, an irregular tree distribution and density contribute to a varied forest scenery, which effectively conveys the desired sense of naturalness (Wagner et al., 2022; Immich & Robl, 2023).
 
 ![Tree Tops](Images/TreeTops.png)
+
+#### Boxplot: Tree Height
 ![TreeHeight_Boxplot](Images/TreeHeight_Boxplot.png)
 
 The Tree Top visualization shows the ALS detected tree tops for both plots: 3261 trees in the Forest of the Soul (Bad Kissingen) and 5767 in the University Forest (Sailershausen).
