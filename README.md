@@ -11,14 +11,14 @@ The phrase "forests are good for you" ("Wald tut gut")  reflects a widely held b
 The Area of Interest (AOI) was manually defined via point cloud segmentation within the open-source software 'CloudCompare'. The AOI is divided into two distinct forest plots, each covering an extent of approximately 20 hectares.
 
 ### Forest Plots
-#### Wald für die Seele, Bad Kissingen
-The "Wald für die Seele" (Forest for the Soul) is a 14.5 hectare nature experience and art project located within the Klauswald in Bad Kissingen, managed by the Foundation for Consciousness Sciences since 2015. The project aims to demonstrate how nature and biodiversity promote mental, physical, and social well-being. It serves as a dedicated space for ecotherapy, meditation, reflection, and the experience of art in nature (Wald für die Seele 2023; Galuska 2023).
+#### Wald für die Seele ("Forest for the Soul"), Bad Kissingen
+The Forest for the Soul is a 14.5 hectare nature experience and art project located within the Klauswald in Bad Kissingen, managed by the Foundation for Consciousness Sciences since 2015. The project aims to demonstrate how nature and biodiversity promote mental, physical, and social well-being. It serves as a dedicated space for ecotherapy, meditation, reflection, and the experience of art in nature (Wald für die Seele 2023; Galuska 2023).
 
-#### University Forest, Sailershausen
-The "University Forest Sailershausen" covers approximately 2,300 hectares near Haßfurt and is managed by the forestry office of the University of Würzburg. Operating as a sustainable commercial forest, its tree composition is dominated by deciduous species. In addition to fulfilling ecological functions like a large bird sanctuary, the woodland serves a dual purpose as a production forest and a scientific research area for academic institutions (Schmidt/Täufer 2023; DFV 2017).
+#### Universitätsforst ("University Forest"), Sailershausen
+The University Forest Sailershausen covers approximately 2,300 hectares near Haßfurt and is managed by the forestry office of the University of Würzburg. Operating as a sustainable commercial forest, its tree composition is dominated by deciduous species. In addition to fulfilling ecological functions like a large bird sanctuary, the woodland serves a dual purpose as a production forest and a scientific research area for academic institutions (Schmidt/Täufer 2023; DFV 2017).
 
 ## Data Source
-The raw datasets utilized in this study were obtained from the OpenData portal of the Bavarian Agency for Digitisation (Bayerische Vermessungsverwaltung (BVV)) and consist of Airborne Laser Scanning (ALS) point clouds. The flight campaign for the University Forest Sailershausen took place between January 18 and February 1, 2025, while the "Wald für die Seele" was surveyed between January 10 and January 28, 2024. 
+The raw datasets utilized in this study were obtained from the OpenData portal of the Bavarian Agency for Digitisation (Bayerische Vermessungsverwaltung (BVV)) and consist of Airborne Laser Scanning (ALS) point clouds. The flight campaign for the University Forest Sailershausen took place between January 18 and February 1, 2025, while the Forest for the Soul was surveyed between January 10 and January 28, 2024. 
 Both datasets feature a minimum point density of 4 points/m². The vertical accuracy is approximately 0.12 m in flat, open terrain, while the horizontal positioning accuracy is around 0.30 m (BVV 2026).
 
 ---
