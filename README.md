@@ -424,7 +424,7 @@ The Forest for the Soul (Bad Kissingen) plot exhibits a more heterogeneous topog
 
 In contrast, the University Forest (Sailershausen) plot is dominated by consistently gentle terrain with low slope values (predominantly green shades) across most of the area. Notable slope increases are primarily restricted to anthropogenic or structural features, such as the embankments along the diagonal forest roads and paths, as well as a distinct polygon with sharp structural edges in the southeastern corner. Overall, Sailershausen presents a considerably flatter and topographically more uniform terrain compared to the more rugged surface structure of Bad Kissingen.
 
-![Accessibility_DIN18040](Images/Accessibility_DIN18040)
+![Accessibility_DIN18040](Images/Accessibility_DIN18040.png)
 
 The accessibility map categorizes terrain suitability based on the 6% slope threshold defined by DIN 18040, classifying areas with slopes of 6% or less as accessible (green) and steeper areas as unsuitable for barrier-free access (red).
 
