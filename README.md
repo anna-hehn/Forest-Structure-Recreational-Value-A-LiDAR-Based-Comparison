@@ -381,7 +381,7 @@ The following section presents the key results of the workflow, including the re
 ### **1) Tree Tops & Tree Height**
 A forest structure that contributes to recreation is described as a multi-layered mixed forest with diverse height and age structures. Furthermore, an irregular tree distribution and density contribute to a varied forest scenery, which effectively conveys the desired sense of naturalness (Wagner et al., 2022; Immich & Robl, 2023).
 
-![Tree Tops](Images/TreeTops.png)
+![Tree Tops](Images/TreeTops1.png)
 
 #### Boxplot: Tree Height
 ![TreeHeight_Boxplot](Images/TreeHeight_Boxplot.png)
