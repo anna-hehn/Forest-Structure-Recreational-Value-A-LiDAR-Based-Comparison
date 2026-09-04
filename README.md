@@ -394,7 +394,7 @@ University Forest (Sailershausen) exhibits a significantly higher stem density w
 ### **2) Crown Area**
 Wide branches and large tree canopies are recommended as structures that convey a sense of shelter and security. For recreational forests, it is advised to preserve large-crowned trees (Immich et al., 2022). Varied or unique lighting conditions resulting from a heterogeneous arrangement of different canopy sizes are described as a distinct quality criterion of recreational forests, as they create a diverse and high-contrast forest scenery (Wagner et al., 2022; Immich et al., 2022).
 
-![CrownArea](Images/CrownArea.png)
+![CrownArea](Images/CrownArea1.png)
 
 The visualization of the crown area illustrates the crown sizes of both plots in square meters. An analysis of the Forest for the Soul (Bad Kissingen) plot reveals a heterogeneous, irregular composition of varying canopy sizes, including several individuals that exceed a substantial area of 150 square meters. The average crown area within this stand is 59.05 square meters.
 In contrast, the University Forest (Sailershausen) stand exhibits only isolated tree crowns exceeding 150 square meters, which are clustered in the western section of the plot. The average crown area here is 32.97 square meters, and the stand is characterized by a rather small and largely homogeneous distribution of canopy sizes.
@@ -402,21 +402,21 @@ In contrast, the University Forest (Sailershausen) stand exhibits only isolated 
 ### **3) Crown Closure**
 Depending on the degree of canopy closure, light and shadow play out in various ways, contributing to both the restorative value and aesthetic appeal of the forest (Immich et al., 2022). The literature recommends a predominantly closed canopy interspersed with mosaic-like clearings. This structural configuration fosters higher humidity, reduces thermal heating, provides shelter from UV radiation, wind, and rain, and enhances the overall microclimate within the forest stand (Wagner et al., 2022; Immich & Robl, 2023; Immich et al., 2022).
 
-![CrownClosure](Images/CrownClosure.png)
+![CrownClosure](Images/CrownClosure1.png)
 
 The visualization above depicts the canopy closure percentage for both study plots. A comparison between the two sites reveals similarly high average canopy closure values, with teh Forest for the Soul (Bad Kissingen) averaging 90.33% and the University Forest (Sailershausen) reaching 91.63%. Both stands are dominated by a dense, closed canopy. However, spatial variations are prominently marked by low canopy closure values. In Bad Kissingen, a distinct, larger opening and lighter spots are concentrated in the southwestern section of the plot, alongside a narrower linear feature along the eastern edge. In Sailershausen, clear diagonal linear features, accompanied by a clearing in the southeastern corner.
 
 ### **4) Tree Density**
 To provide alternating light conditions while simultaneously offering a sense of retreat, shelter, and security, individual denser forest patches within an overall open stand with wider tree spacing are favored. This structural composition ensures both sufficient visual depth and easy physical accessibility for forest visitors (Immich et al., 2022).
 
-![TreeDensity](Images/TreeDensity.png)
+![TreeDensity](Images/TreeDensity1.png)
 
 The visualization above presents the spatial variation in tree density across both study plots. A comparative assessment shows that Bad Kissingen exhibits an overall low tree density with a mean of 154.21 stems per hectare (N/ha), dominated by light yellow values with only minor, localized clusters along the northern border and near the southern edge. In contrast, the Sailershausen plot displays a noticeably higher tree density, averaging 272.59 N/ha. It features a distinct spatial gradient with a prominent, highly dense belt extending across the southern boundary, alongside a localized high-density cluster in the eastern section of the plot.
 
 ### **5) Terrain Slope & Accessibility**
 Terrain slope is an important aspect of topography and is primarily associated with three factors: accessibility, physical exertion, and the experiential value of a forest. In the Bavarian criteria catalog for healing and curative forests, topography—alongside forest size, accessibility, tranquility, and air purity—is listed among the general requirements (Immich et al., 2022). This parameter is particularly relevant for individuals with mobility impairments. Consequently, the terrain directly influences how strenuous, safe, and inclusive a forest experience can be (Wagner et al., 2022; Immich & Robl, 2023; Immich et al., 2022). For publicly accessible buildings and their surrounding circulation areas, the German standard DIN 18040 specifies a maximum slope of 6% (BStMI, 2010).
 
-![TerrainSlope](Images/TerrainSlope.png)
+![TerrainSlope](Images/TerrainSlope1.png)
 
 The spatial visualization depicts the terrain slope percentage across both study plots, revealing notable topographic differences between the two areas.
 
@@ -424,7 +424,7 @@ The Forest for the Soul (Bad Kissingen) plot exhibits a more heterogeneous topog
 
 In contrast, the University Forest (Sailershausen) plot is dominated by consistently gentle terrain with low slope values (predominantly green shades) across most of the area. Notable slope increases are primarily restricted to anthropogenic or structural features, such as the embankments along the diagonal forest roads and paths, as well as a distinct polygon with sharp structural edges in the southeastern corner. Overall, Sailershausen presents a considerably flatter and topographically more uniform terrain compared to the more rugged surface structure of Bad Kissingen.
 
-![Accessibility_DIN18040](Images/Accessibility_DIN18040.png)
+![Accessibility_DIN18040](Images/Accessibility_DIN18040)
 
 The accessibility map categorizes terrain suitability based on the 6% slope threshold defined by DIN 18040, classifying areas with slopes of 6% or less as accessible (green) and steeper areas as unsuitable for barrier-free access (red).
 
