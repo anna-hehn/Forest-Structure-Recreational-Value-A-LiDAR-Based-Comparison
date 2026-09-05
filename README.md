@@ -20,6 +20,7 @@ The University Forest Sailershausen covers approximately 2.300 hectares near HaÃ
 ## Data Source
 The raw datasets utilized in this study were obtained from the OpenData portal of the Bavarian Agency for Digitisation (Bayerische Vermessungsverwaltung (BVV)) and consist of Airborne Laser Scanning (ALS) point clouds. The flight campaign for the University Forest Sailershausen took place between January 18 and February 1, 2025, while the Forest for the Soul was surveyed between January 10 and January 28, 2024. 
 Both datasets feature a minimum point density of 4 points/mÂ². The vertical accuracy is approximately 0.12 m in flat, open terrain, while the horizontal positioning accuracy is around 0.30 m (BVV, 2026).
+The raw data used for this study, obtained from the aforementioned source, can be downloaded from the following link:
 
 ---
 
