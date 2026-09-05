@@ -22,8 +22,11 @@ The raw datasets utilized in this study were obtained from the OpenData portal o
 Both datasets feature a minimum point density of 4 points/m². The vertical accuracy is approximately 0.12 m in flat, open terrain, while the horizontal positioning accuracy is around 0.30 m (BVV, 2026).
 
 The raw data used for this study, obtained from the aforementioned source, can be downloaded from the following links:
-Forest for the Soul (Bad Kissingen): https://gigamove.rwth-aachen.de/en/download/173439051852f290f19906480ee2e747
-University Forest Sailershausen (Sailershausen): https://gigamove.rwth-aachen.de/en/download/9bb22f98eeced15eb0a41c9a7c2aaf64
+Forest for the Soul (Bad Kissingen): 
+https://gigamove.rwth-aachen.de/en/download/173439051852f290f19906480ee2e747
+
+University Forest Sailershausen (Sailershausen): 
+https://gigamove.rwth-aachen.de/en/download/9bb22f98eeced15eb0a41c9a7c2aaf64
 
 ---
 
