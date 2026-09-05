@@ -20,13 +20,19 @@ The University Forest Sailershausen covers approximately 2.300 hectares near HaÃ
 ## Data Source
 The raw datasets utilized in this study were obtained from the OpenData portal of the Bavarian Agency for Digitisation (Bayerische Vermessungsverwaltung (BVV)) and consist of Airborne Laser Scanning (ALS) point clouds. The flight campaign for the University Forest Sailershausen took place between January 18 and February 1, 2025, while the Forest for the Soul was surveyed between January 10 and January 28, 2024. 
 Both datasets feature a minimum point density of 4 points/mÂ². The vertical accuracy is approximately 0.12 m in flat, open terrain, while the horizontal positioning accuracy is around 0.30 m (BVV, 2026).
-The raw data used for this study, obtained from the aforementioned source, can be downloaded from the following link:
+
+The raw data used for this study, obtained from the aforementioned source, can be downloaded from the following links:
+Forest for the Soul (Bad Kissingen): https://gigamove.rwth-aachen.de/en/download/173439051852f290f19906480ee2e747
+University Forest Sailershausen (Sailershausen): https://gigamove.rwth-aachen.de/en/download/9bb22f98eeced15eb0a41c9a7c2aaf64
 
 ---
 
 # Workflow
 
 ## Derivation of Forest Structure Parameters using the [lidR](https://github.com/r-lidar/lidR) package
+The workflow described in the following sections was applied identically to both study sites to ensure a consistent and comparable analysis. For clarity, the workflow presented in this README is demonstrated using the `603_5547_seg.laz` dataset from the University Forest Sailershausen.
+
+When reproducing the analysis, the file paths must be adjusted to the respective local directory structure. To apply the same workflow to the Forest for the Soul site in Bad Kissingen, the example dataset `603_5547_seg.laz` can be replaced with `575_5563.laz` at the corresponding input locations in the code. All subsequent processing steps and parameter settings remain unchanged for both study sites.
 
 ### Environment Setup & Data Loading
 
